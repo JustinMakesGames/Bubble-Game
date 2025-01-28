@@ -30,9 +30,7 @@ public class BubbleMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 direction = new Vector3(_horizontalMovement, 0, _verticalMovement);
-
-        _rb.velocity = direction * speed;
-
+        _rb.velocity = direction * speed * Time.deltaTime;
     }
 
 }
